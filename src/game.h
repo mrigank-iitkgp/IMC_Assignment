@@ -11,7 +11,7 @@ class Game {
         void playGame(int& nRounds);
         void playGameUtil(Player& player1 , Player& player2 , int& nRounds);
         std::string assignPlayerName(std::string const& playerAlias);
-        void checkRoundWinner(Player& player1 , Player& player2);
-        void checkGameWinner(Player& player1 , Player& player2);
+        std::string checkRoundWinner(Player& player1 , Player& player2);
+        std::string checkGameWinner(Player& player1 , Player& player2);
 };
 #endif

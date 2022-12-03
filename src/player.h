@@ -7,7 +7,7 @@
 class Player {
     public:
         Player(std::string const& name);
-        //virtual ~Player() {}
+        virtual ~Player() {}
         virtual void play() = 0;
         virtual void printMessage() = 0;
         void setHand(std::string const& hand);

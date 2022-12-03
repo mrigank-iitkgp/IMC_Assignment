@@ -58,9 +58,10 @@ std::string Game::assignPlayerName(std::string const & playerAlias) {
     }
 }
 
-void Game::checkRoundWinner(Player& player1 , Player& player2) {
+std::string Game::checkRoundWinner(Player& player1 , Player& player2) {
     if(player1.getHand() == player2.getHand()) {
         std::cout << "It's a tie!!\n";
+        return "TIE";
     } else {
         
         if( (player1.getHand() == "ROCK" && player2.getHand() == "SCISSORS") || 
@@ -69,28 +70,33 @@ void Game::checkRoundWinner(Player& player1 , Player& player2) {
             
             player1.setGamesWon();
             player1.printMessage();
-
+            return player1.getName();
         } else {
             
             player2.setGamesWon();
             player2.printMessage();
-
+            return player2.getName();
         } 
     }
 }
 
-void Game::checkGameWinner(Player& player1 , Player& player2) {
+std::string Game::checkGameWinner(Player& player1 , Player& player2) {
+    std::string result;
     if(player1.getGamesWon() == player2.getGamesWon()) {
         std::cout << "Game is tied!!\n";
+        result = "TIE";
     } else if(player1.getGamesWon() > player2.getGamesWon()) {
         std::cout << "Congratulations, " << player1.getName() << "!! You have won the game!!\n";
+        result = player1.getName();
     } else {
         std::cout << "Congratulations, " << player2.getName() << "!! You have won the game!!\n";
+        result = player2.getName();
     }
 
     std::cout << "Final Scoreline : \n";
     std::cout << player1.getName() << " " << player1.getGamesWon() << " - " << 
                 player2.getGamesWon() << " " << player2.getName() << "\n";
+    return result;
 }
 
 void Game::playGameUtil(Player& player1 , Player& player2 , int& nRounds) {
