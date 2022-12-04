@@ -32,3 +32,5 @@ Example:
 (base) Mriganks-MacBook-Pro:src mrigank$ ./rockPaperScissors
 ```
 
+## UML class Diagram
+![Alt text](/resources/class_UML_diagram.jpeg?raw=true "Title")
