@@ -33,4 +33,4 @@ Example:
 ```
 
 ## UML class Diagram
-![Alt text](/resources/class_UML_diagram.jpeg?raw=true "Title")
+![Alt text](/resources/class_UML_diagram.jpeg?raw=true "Class UML diagram")
