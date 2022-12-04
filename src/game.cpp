@@ -7,10 +7,13 @@
 #include <random>
 #include <vector>
 
+// Botnames list to select different botnames
+
 std::vector < std::string > botNames = {"Albert" , "Cecil" , "Clarence" , "Sophie" , "Emily" , "Bert" , 
                                             "Elmer" , "Elliot" , "Nadia" , "Sara" , "Meg"};
 
 
+// Prompting the user to select the Play Mode
 
 PlayMode Game::getPlayMode() {
     std::cout << "Select the mode of play!!\n";
@@ -40,6 +43,10 @@ PlayMode Game::getPlayMode() {
     }
 }
 
+// Assign names to the player. 
+// If the player is HUMAN then prompts the user to enter his/her name
+// If the player is BOT then randomly selects the bot name from the list
+
 std::string Game::assignPlayerName(std::string const & playerAlias) {
     std::string name;
     if(playerAlias == "HUMAN") {
@@ -58,6 +65,8 @@ std::string Game::assignPlayerName(std::string const & playerAlias) {
         return botNames[botIdx - 1];
     }
 }
+
+// Checks the Round Winner
 
 std::string Game::checkRoundWinner(Player& player1 , Player& player2) {
     if(player1.getHand() == player2.getHand()) {
@@ -81,6 +90,8 @@ std::string Game::checkRoundWinner(Player& player1 , Player& player2) {
     }
 }
 
+// Checks the overall game winner
+
 std::string Game::checkGameWinner(Player& player1 , Player& player2) {
     std::string result;
     if(player1.getGamesWon() == player2.getGamesWon()) {
@@ -100,6 +111,8 @@ std::string Game::checkGameWinner(Player& player1 , Player& player2) {
     return result;
 }
 
+// Util function for playing the game
+
 void Game::playGameUtil(Player& player1 , Player& player2 , int& nRounds) {
     for(int round = 1 ; round <= nRounds ; round++) {
         std::cout << "Welcome to Round " << round << "\n";
@@ -111,6 +124,9 @@ void Game::playGameUtil(Player& player1 , Player& player2 , int& nRounds) {
         std::cout << player2.getName() << " : " << player2.getGamesWon() << "\n";
     }
 }
+
+// Playgame interface exposed in the main function
+
 void Game::playGame(int& nRounds) {
     PlayMode mode = this->getPlayMode();
     if(mode == HUMAN_VS_COMPUTER) {
