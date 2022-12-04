@@ -35,7 +35,7 @@ Example:
 1. The unit tests for the program are in test_without_Gtest folder.
 2. To run the test do the following in terminal/powershell opened in the downloaded folder:
 ```
-cd ../test_without_Gtest
+cd test_without_Gtest
 ```
   - For macOS
 ```
