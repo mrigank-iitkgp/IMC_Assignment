@@ -11,9 +11,10 @@ int getNumberOfRounds() {
     if(std::cin && nRounds < INT32_MAX && nRounds >= 0) {
         return nRounds;
     } else {
+        std::cout <<"Uh Oh!! The number of rounds is invalid. Please try again!!\n";
         std::cin.clear();
-        std::cout <<"Uh Oh!! The number of rounds is invalid. Restart the game!!\n";
-        return -1;
+        std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
+        return getNumberOfRounds();
     }
 }
 int main() {
@@ -24,7 +25,7 @@ int main() {
     int nRounds = getNumberOfRounds();
     if(nRounds == 0) {
         std::cout << "You're the only winner!!\n";
-    } else if(nRounds > 0) {
+    } else {
         Game game;
         game.playGame(nRounds);
     }

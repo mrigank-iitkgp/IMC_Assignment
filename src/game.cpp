@@ -39,6 +39,7 @@ PlayMode Game::getPlayMode() {
     } else {
         std::cout << "Invalid Choice!! Please enter the valid option\n";
         std::cin.clear();
+        std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
         return this->getPlayMode();
     }
 }
