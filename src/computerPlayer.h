@@ -8,7 +8,6 @@ class ComputerPlayer : public Player {
         ComputerPlayer(std::string const& name);
         virtual void play();
         virtual void printMessage();
-        int getRandomNumber();
     private:
         std::vector < std::string > handsList;
 };

@@ -3,8 +3,10 @@
 #include "computerPlayer.h"
 #include "humanPlayer.h"
 #include <string>
+#include <vector>
 
 enum PlayMode {HUMAN_VS_COMPUTER , COMPUTER_VS_COMPUTER , HUMAN_VS_HUMAN};
+extern std::vector < std::string > botNames;
 class Game {
     public:
         PlayMode getPlayMode();

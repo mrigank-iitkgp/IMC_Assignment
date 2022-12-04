@@ -5,6 +5,7 @@
 #include <iostream>
 #include <string>
 #include <random>
+#include <vector>
 
 std::vector < std::string > botNames = {"Albert" , "Cecil" , "Clarence" , "Sophie" , "Emily" , "Bert" , 
                                             "Elmer" , "Elliot" , "Nadia" , "Sara" , "Meg"};
