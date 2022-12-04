@@ -60,7 +60,5 @@ g++ -std=c++11 -o rockPaperScissors_tst.exe unitTest.cpp ../src/game.cpp ../src/
 4. To check the unit test cases, open ```/test/unitTest.cpp```
 
 ## UML class Diagram
-<p>
-    <img src="/resources/class_UML_diagram.jpeg"/>
-</p>
+![UML_Diagram](/resources/class_UML_diagram.jpeg)
 
