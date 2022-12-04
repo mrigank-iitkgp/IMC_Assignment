@@ -31,6 +31,12 @@ Example:
 (base) Mriganks-MacBook-Pro:src mrigank$ g++ -std=c++11 -o rockPaperScissors *.cpp
 (base) Mriganks-MacBook-Pro:src mrigank$ ./rockPaperScissors
 ```
+## Test Cases
+1. The unit tests for the program is in the test folder.
+2. To build and run the unit tests you need to have the CMake installed. In this program I have used GTest to configure and run the unit test suite.
+3. To see the outputs of the unit tests, you can run ```../build/test/RockPaperScissors_tst```
+4. To check the unit test cases, open ```../test/unitTest.cpp```
 
 ## UML class Diagram
 ![Alt text](/resources/class_UML_diagram.jpeg?raw=true "Class UML diagram")
+
