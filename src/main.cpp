@@ -2,7 +2,7 @@
 #include <string>
 #include <time.h>
 #include "game.h"
-
+#include <cstdio>
 
 int getNumberOfRounds() {
     int nRounds;
@@ -30,6 +30,8 @@ int main() {
         game.playGame(nRounds);
     }
     // Added this line to avoid abrupt exit from the terminal in Windows Machine
-    system("pause");
+    std::cin.ignore();
+    std::cout << "Press any key to exit!!\n";
+    std::cin.get();  
     return 0;
 }
