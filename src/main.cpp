@@ -31,7 +31,7 @@ int main() {
     }
     // Added this line to avoid abrupt exit from the terminal in Windows Machine
     std::cin.ignore();
-    std::cout << "Press any key to exit!!\n";
+    std::cout << "Press enter to exit!!\n";
     std::cin.get();  
     return 0;
 }
