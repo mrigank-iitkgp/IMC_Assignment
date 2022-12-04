@@ -27,5 +27,5 @@ void HumanPlayer :: play() {
 }
 
 void HumanPlayer :: printMessage() {
-    std::cout << "\n" << this->getName() << " has won this round!!";
+    std::cout << this->getName() << " has won this round!!\n";
 }

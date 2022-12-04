@@ -31,7 +31,29 @@ Example:
 (base) Mriganks-MacBook-Pro:src mrigank$ g++ -std=c++11 -o rockPaperScissors *.cpp
 (base) Mriganks-MacBook-Pro:src mrigank$ ./rockPaperScissors
 ```
-## Test Cases
+## Unit Testing without CMake and Gtest
+1. The unit tests for the program are in test_without_Gtest folder.
+2. To run the test do the following in terminal/powershell opened in the downloaded folder:
+```
+cd ../test_without_Gtest
+```
+  - For macOS
+```
+g++ -std=c++11 -o rockPaperScissors_tst unitTest.cpp ../src/game.cpp ../src/humanPlayer.cpp ../src/computerPlayer.cpp ../src/player.cpp ../src/randomNumber.cpp
+```
+  - For Linux
+```
+g++ -std=c++11 -o rockPaperScissors_tst.out unitTest.cpp ../src/game.cpp ../src/humanPlayer.cpp ../src/computerPlayer.cpp ../src/player.cpp ../src/randomNumber.cpp
+```
+  - For Windows
+```
+g++ -std=c++11 -o rockPaperScissors_tst.exe unitTest.cpp ../src/game.cpp ../src/humanPlayer.cpp ../src/computerPlayer.cpp ../src/player.cpp ../src/randomNumber.cpp
+```
+  - Open the executable file depending on the OS in the terminal/powershell. For example:
+```
+./rockPaperScissors_tst.out
+```
+## Unit Testing using CMake and Gtest
 1. The unit tests for the program is in the test folder.
 2. To build and run the unit tests you need to have the CMake installed. In this program I have used GTest to configure and run the unit test suite.
 3. To see the outputs of the unit tests, you can run ```../build/test/RockPaperScissors_tst```

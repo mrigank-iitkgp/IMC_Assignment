@@ -12,8 +12,8 @@ int getNumberOfRounds() {
         return nRounds;
     } else {
         std::cin.clear();
-        std::cout <<"Uh Oh!! The number of rounds is too high or too low. Please try again!!\n";
-        return getNumberOfRounds();
+        std::cout <<"Uh Oh!! The number of rounds is invalid. Restart the game!!\n";
+        return -1;
     }
 }
 int main() {
@@ -22,10 +22,9 @@ int main() {
     
     // Prompting the user to ask for the number of rounds
     int nRounds = getNumberOfRounds();
-    
     if(nRounds == 0) {
         std::cout << "You're the only winner!!\n";
-    } else {
+    } else if(nRounds > 0) {
         Game game;
         game.playGame(nRounds);
     }
